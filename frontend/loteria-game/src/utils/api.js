@@ -1,4 +1,4 @@
-const qs = require('qs')
+//const qs = require('qs')
 const io = require("socket.io-client");
 const socket = io("http://localhost:8000", {
   withCredentials: true,
@@ -8,7 +8,7 @@ const socket = io("http://localhost:8000", {
 });
 
 function socketConnector(cb) {
-const {username, room} = qs.parse(location.search, { ignoreQueryPrefix:true})
+//const {username, room} = qs.parse(location.search, { ignoreQueryPrefix:true})
   
 socket.emit('join',{username, room}, (error)=>{
     if(error){
